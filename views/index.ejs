@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<title>Display Assessor Data On The Map</title>
+	    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+	    <meta charset="utf-8">
+		<!-- <link rel="stylesheet" href="/stylesheets/reset.css"> -->
+		<link rel='stylesheet' href='/stylesheets/style.css' />
+		
+		<meta property="og:type" content="website" />
+	<!-- 	<meta property="og:image" content=/> -->
+		<meta property="og:title" content="Assessor data for Polk County and Dallas County" />
+		<meta property="og:site_title" content="Find house information and see it on a map" />
+		<meta property="og:description" content="Display assessor data for a house and see where it is on the map"/>
+		<meta property="og:url" content=""/>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCv0CzigV5skGZxdeKL6fjP6UQnO320Owo&libraries=places">
+	    <!-- <script type="text/javascript" src="/js/map.js"></script> -->
+  </head>
+  <body>
+  	<script type="text/javascript" src="jquery.js"></script>
+  	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+    
+	<!-- <script src="js/map.js"</script> -->
+	<script type="text/javascript" src="js/map.js"></script>
+	<div id="control">
+		<h3>Choose data to display on map</h3>
+		<table>
+		<tr>
+			<td>
+				<input id="tsfCheckbox" name="tsf" value="tsf" type="checkbox">
+				<label for="tsfCheckbox">Total Square Feet Living Area</label>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input id="bedroomsCheckbox" name="bedrooms" value="bedrooms" type="checkbox">
+				<label for="bedroomsCheckbox">Bedrooms</label>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input id="bathroomsCheckbox" name="bathrooms" value="bathrooms" type="checkbox">
+				<label for="bathroomsCheckbox">Bathrooms</label>
+			</td>
+		</tr>		
+		<tr>
+			<td>
+				<input id="yearBuiltCheckbox" name="yearBuilt" value="yearBuilt" type="checkbox">
+				<label for="yearBuiltCheckbox">Year Built</label>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input id="th1Checkbox" name="th1" value="th1" type="checkbox">
+				<label for="th1Checkbox">Name of Title Holder 1</label>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input id="th2Checkbox" name="th2" value="th2" type="checkbox">
+				<label for="th2Checkbox">Name of Title Holder 2</label>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input id="titleTransferCheckbox" name="titleTransfer" value="titleTransfer" type="checkbox">
+				<label for="titleTransferCheckbox">Date of most recent title transfer/sale</label>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input id="lotSizeCheckbox" name="lotSize" value="lotSize" type="checkbox">
+				<label for="lotSizeCheckbox">Lot Size</label>
+			</td>
+		</tr>
+		</table>
+	</div>
+	<div style="height: 1000px;" id="map-canvas"></div>
+<!--    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVAmePMV3Sfrj-I0vgWKhL1eY5WqZPyd0&libraries=places&callback=initAutocomplete"
+  	async defer></script> -->
+  </body>
+</html>
